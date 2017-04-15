@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>任务五：零基础HTML及CSS编码（二）</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                background-color: rgb(222,222,222);
+            }
+            .inner{
+                background-color: white;
+                padding: 20px;
+                margin-bottom: 20px;
+                display: block;
+                border-style: outset;
+                border-width: 2px;
+            }
+            h3{
+                color: rgb(100,100,100);
+                font-size: 16px;
+            }
+            h4{
+                color: rgb(100,100,100);
+                font-size: 14px;
+            }
+            p{
+                text-indent: 2em;
+                line-height: 1.5em;
+            }
+            dd{
+                width: 100px;
+                height: 100px;
+                border: 1px solid gray;
+                font-size: 13px;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                display: inline-block;
+            }
+            dd img{
+                max-width: 100px;
+                margin-top: 5px;
+            }
+            table{
+                    width: 100%;
+                    border-collapse: collapse;
+            }
+            tr, td{
+                border: 1px solid silver;
+                padding: 4px;
+                font-size: 13px;
+            }
+            #submit{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 16px;
+                color: white;
+                background-color: rgb(51,85,208);
+                border-radius: 5px;
+                border:0;
+            }
+            .head{
+                display:inline-block;
+                height: 50px;
+                line-height: 50px;
+                width: 100%;
+                background-color: rgb(51,51,51);
+                border: 0;
+                margin: 0;
+                padding: 0px;
+                text-align: right;
+                list-style-type: disc;
+            }
+            .head img{
+                margin-left: 20px;
+                height: 50px;
+                width: 100px;
+                float: left;
+            }
+            .head li{
+                height: 50px;
+                line-height: 50px;
+                display:inline;
+                font-size: 11px;
+                color: white;
+                padding: 10px;
+            }
+            .head li a:link {
+                color:white;
+                text-decoration:none;
+            }
+            .head li a:visited {
+                color:white;
+                text-decoration:none;
+            }
+            .head li a:hover {
+                color:silver;
+                text-decoration:none;
+            }
+            .regist>label{
+                display: inline-block;
+                width: 28%;
+                margin:10px 15px 0;
+                text-align:right;
+            }
+            .regist p{
+                margin-left: 40%;
+                margin-top: 10px;
+                color: gray;
+                text-indent:0;
+                line-height: 1em;
+                text-align:left;
+            }
+            #bottom{
+                height: 50px;
+                line-height: 50px;
+                width: 100%;
+                margin-top: 20px;
+                font-size: 12px;
+                color: white;
+                background-color: black;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            .container{
+                margin: 20px;
+                position: relative;
+                overflow:hidden;
+            }
+            .left{
+                margin: 0 360px 0 0;
+            }
+            .right{
+                float: right;
+                right:0;
+                top:0;
+                width: 300px;/**题目要求为200px**/
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="head">
+            <img src="http://imgsrc.baidu.com/forum/w%3D580/sign=0d12d5597d1ed21b79c92eed9d6fddae/0a9c7b899e510fb385a2333cd933c895d0430cb7.jpg" />
+            <li><a href="http://ife.baidu.com">导航链接一</a></li>
+            <li><a href="http://ife.baidu.com">导航链接二</a></li>
+            <li><a href="http://ife.baidu.com">导航链接三</a></li>
+            <li><a href="http://ife.baidu.com">导航链接四</a></li>
+        </ul>
+        <div class="container">
+            <div class="right inner">
+                <h2 style="border-left:4px solid silver;text-indent:0.5em;font-size: 16px">这里以后是一个侧栏，这是侧栏的标题</h2>
+                <form class="regist" style="font-size: 12px">
+                    <label for="mailaddress">请输入邮箱地址</label>
+                    <input type="text" name="mailaddress" value="这是一个文本输入框" />
+                    <p>邮箱地址请按要求格式输入</p>
+                    <label for="password">请输入密码</label>
+                    <input type="text" name="password" value="这是一个文本输入框" /> <br />
+                    <label for="repassword">请重复输入密码</label>
+                    <input type="text" name="repassword" value="这是一个文本输入框" /><br />
+                    <p>密码请为6-16位英文数字</p>
+                    <label for="gender">性别</label>
+                    <span>
+                        <label><input type="radio" name="gender" value="male" checked="checked" />男</label>
+                        <label><input type="radio" name="gender" value="female" />女</label>
+                    </span>
+                    <br />
+                    <label for="city">城市</label>
+                    <select>
+                        <option value="beijing">北京</option>
+                        <option value="shanghai">上海</option>
+                    </select>
+                    <br />
+                    <label for="hobbie">爱好</label>
+                    <span>
+                        <label><input type="checkbox" name="hobbies" value="sport" />运动</label>
+                        <label><input type="checkbox" name="hobbies" value="art" />艺术</label>
+                        <label><input type="checkbox" name="hobbies" value="science" />科学</label>
+                    </span>
+                    <br />
+                    <label for="description" style="vertical-align:top">个人描述</label>
+                    <textarea style="width:55%" rows="6">这是一个多行输入框，输入您的个人描述</textarea>
+                    <input type="submit" name="submit" value="确认提交" id="submit"/>
+                </form>
+            </div>
+            <div class="left">
+                <div class="inner">
+                    <h2>文章一级标题</h2>
+                    <h3>文章二级标题</h3>
+                    <h4>文章作者&nbsp文章发表时间</h4>
+                    <p>
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
+                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。<br />
+                    </p>
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png" style="width: 100%;max-width: 502px;" />
+                    <p>
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+                    </p>
+                </div>
+                <div class="inner">
+                    <h2>另一篇文章一级标题</h2>
+                    <h3>文章二级标题</h3>
+                    <h4>文章作者&nbsp文章发表时间</h4>
+                    <p>
+                        这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
+                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。<br />
+                    </p>
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png" style="width: 100%;max-width: 502px;"/>
+                    <ul style="list-style-type: none">
+                            <li>列表项目一</li>
+                            <li>列表项目二</li>
+                            <li>列表项目三</li>
+                    </ul>
+                </div>
+                <div class="inner">
+                    <h2>图片</h2>
+                    <dl>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                        <dd>好看的图片<br /><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490113952222&di=5c80fb1ce7bce7a96007af4108cc1678&imgtype=0&src=http%3A%2F%2Ffun.youth.cn%2Fyl24xs%2F201703%2FW020170213517238354781.png"  style="padding-bottom:1em" /></dd>
+                    </dl>
+                </div>
+                <div class="inner" style="margin-bottom: 0">
+                    <h2>最后一篇文章一级标题</h2>
+                    <h3>文章二级标题</h3>
+                    <h4>文章作者&nbsp文章发表时间</h4>
+                    <ol>
+                        <li>排名1</li>
+                        <li>排名2</li>
+                        <li>排名3</li>
+                    </ol>
+                    <table>
+                        下面是一个表格，给表格加了一个border=“1”好让你看出是一个表格，你们写html时不需要加
+                        <tr style="background-color:rgb(51,51,51)">
+                            <td style="color:white">表头</td>
+                            <td style="color:white">表头</td>
+                            <td style="color:white">表头</td>
+                        </tr>
+                        <tr>
+                            <td>表内容单元格</td>
+                            <td>表内容单元格</td>
+                            <td><a href="http://ife.baidu.com" target="_blank">操作</a></td>
+                        </tr>
+                        <tr>
+                            <td>表内容单元格</td>
+                            <td>表内容单元格</td>
+                            <td><a href="http://ife.baidu.com" target="_blank">操作</a></td>
+                        </tr>
+                        <tr>
+                            <td>表内容单元格</td>
+                            <td>表内容单元格</td>
+                            <td><a href="http://ife.baidu.com" target="_blank">操作</a></td>
+                        </tr>
+                        <tr>
+                            <td>表内容单元格</td>
+                            <td>表内容单元格</td>
+                            <td><a href="http://ife.baidu.com" target="_blank">操作</a></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:rgb(204,204,204)">总计</td>
+                            <td colspan="2"; style="background-color:rgb(204,204,204)">1000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p id="bottom">版权所有© </p>
+    </body>
+</html>
